@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Product Review</title>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+        <script src="https://www.parsecdn.com/js/parse-1.6.0.min.js"></script>
+        <script type="text/javascript" src="js/review.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+		<!-- For the stars -->
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Product Name</h1>
+			<div class="row">
+				<div class="col-xs-12 col-md-4">
+					<text> Insert a picture of product </text>
+				</div>
+				<div class="col-xs-4 col-md-8" id="description">
+					Insert all kinds of descriptions
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<form id="review-form">
+						<h4>Write a Review!</h4>
+						<div id="star">
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+							<i class="fa fa-star"></i>
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="band" placeholder="Title" required="required"/>
+						</div>
+						<div class="form-group">
+							<textarea class="form-control" form="review-form" placeholder="What did you think?" required="required"></textarea>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
