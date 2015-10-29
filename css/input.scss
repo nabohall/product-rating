@@ -1,0 +1,48 @@
+$body_color: #eaeaea;
+$radius: 10px;
+$review-font:10px;
+
+body{
+	background-color: $body-color;
+}
+
+img {
+	max-width:100%;
+}
+
+h1 {
+	text-align:center;
+}
+
+.fa {
+	font-size: 16px;	
+}
+
+.fa-fw {
+	color: orange;
+}
+
+.reviewContainer {
+	overflow:hidden;
+	background-color: darken($body-color, 10%);
+	border-radius: $radius;
+	border-bottom: 5px opacify( darken($body-color, 50%), .3) solid;
+	border-right: 5px opacify( darken($body-color, 50%), .3) solid;
+	padding: 10px;
+	margin-bottom: 15px;
+	margin-top: 20px;
+
+	text {
+		font-size: $review-font;
+
+		font-style:italic;
+	}
+
+	.clickable {
+		float:right;
+		display:inline-block;
+		padding-right: 7px;
+		cursor:pointer;
+	}
+
+}

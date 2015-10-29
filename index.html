@@ -6,47 +6,73 @@
 
         <title>Product Review</title>
 
+        <!--Various libraries,ie JQuery, Bootstrap, Raty-->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
         <script src="https://www.parsecdn.com/js/parse-1.6.0.min.js"></script>
         <script type="text/javascript" src="js/review.js"></script>
+        <script type="text/javascript" src="lib/jquery.raty-fa.js"></script>
+
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
 		<!-- For the stars -->
 		<link href="https://netdna.bootstrapcdn.com/font-awesome/latest/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css">
 
 	</head>
 
 	<body>
 		<div class="container">
-			<h1>Product Name</h1>
+		<!-- Product Description -->
+			<h1>Final Fantasy XIV: Heavensward</h1>
 			<div class="row">
-				<div class="col-xs-12 col-md-4">
-					<text> Insert a picture of product </text>
+				<div class="col-xs-12 col-md-6">
+					<img src="img/product.jpg" alt="product_review" />
 				</div>
-				<div class="col-xs-4 col-md-8" id="description">
-					Insert all kinds of descriptions
+				<div class="col-xs-12 col-md-6" id="description">
+					<h3>Average rating:</h3>
+					<div id="average"></div>
+					<p>This MMORPG (Massively Multiplayer Online Role-Playing Game) is one of the many, many games in the Final Fantasy line. Developed and 
+					published by Square Enix, it was released in June 2015 for the PS3, PS4, PC and Mac, although the Mac version has been pulled for now. </p>
+					<p>Set in the world of Eorzea, the player gets to create a character and choose a class, either one of the Disciples of War, or a Desciple of Magic.
+					However, throughout the course of the game, the player my choose to play as any one of the available classes, on the same character!</p>
+
+					<p>To learn more information, visit:</p>
+					<ul>
+						<li><a href="https://en.wikipedia.org/wiki/Final_Fantasy_XIV:_A_Realm_Reborn" target="_blank">Wikipedia</a></li>
+						<li><a href="http://na.finalfantasyxiv.com/" target="_blank">Final Fanstay Home Page</a></li>
+					</ul>
+
+					<p>To purchase, please visit:</p>
+					<ul>
+						<li><a href="https://store.na.square-enix.com/final-fantasy-xiv/" target="_blank">Square Enix Store</a></li>
+						<li><a href="http://www.amazon.com/s/ref=nb_sb_noss_1?url=search-alias%3Daps&field-keywords=final+fantasy+14" target="_blank">Amazon</a></li>
+					</ul>
 				</div>
 			</div>
+
+			<!-- Review Form -->
 			<div class="row">
 				<div class="col-xs-12">
 					<form id="review-form">
-						<h4>Write a Review!</h4>
-						<div id="star">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
+						<h3>Write a Review!</h3>
+						<div id="star"></div>
+						<div class="form-group">
+							<input type="text" class="form-control" id="title" placeholder="Title" required="required"/>
 						</div>
 						<div class="form-group">
-							<input type="text" class="form-control" id="band" placeholder="Title" required="required"/>
+							<textarea class="form-control" id="body" form="review-form" placeholder="What did you think?" required="required"></textarea>
 						</div>
-						<div class="form-group">
-							<textarea class="form-control" form="review-form" placeholder="What did you think?" required="required"></textarea>
-						</div>
+						<button type="submit" class="btn btn-primary">Submit Review!</button>
 					</form>
 				</div>
 			</div>
+
+			<!-- Reviews Area -->
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="reviewArea"></div>
+				</div>	
+			</div>	
 		</div>
 	</body>
 
