@@ -60,9 +60,7 @@ var addReview = function(item){
 
 	var num_helpful = item.get('help_count');
 	var count = item.get('total_count');
-	//var date = item.get('createdAt'); Look at later?
 
-	//var date_p = $('<text></text>').text("created on " + date);
 	var help_p = $('<text></text>').text(num_helpful + " out of " + count + " found this review helpful.");
 
 	var helpful_icon = $('<i></i>').addClass(THUMBS_UP);
@@ -92,7 +90,7 @@ var addReview = function(item){
 	reviewBox.append(helpful_icon);
 	reviewBox.append(unhelpful_icon);
 	reviewBox.append(star_rating);
-	//reviewBox.append(date_p);
+
 	reviewBox.append(body);
 	reviewBox.append(help_p);
 		
@@ -107,9 +105,6 @@ $(document).ready(function(){
 	$('#star').raty({
 		half:true
 	});
-
-
-	//Create an average review rate and insert here.
 
 	//WHen the page loads, get all previous review and load them
 	loadReviews();
